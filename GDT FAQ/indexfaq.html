@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="stylefaq.css">
+</head>
+<body>
+    <header>
+        <!-- Menu -->
+        <nav class="menu">
+            <div>
+                <a href="#"><img src="images/logo 1.png" alt="Logo" class="logo"></a>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Artigos</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Sobre nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <!-- Seção de Texto -->
+        <div class="text-section">
+            <h1 class="titulo">FAQs</h1>
+            <p class="desc">
+                Tem perguntas? Aqui você irá achar as respostas mais adequadas com acesso 
+                a suporte e instruções de atendimento.
+                <br>
+                <span class="maisinfo">Clique <a href="#" id="redirect">aqui</a> se não tiver encontrado a resposta que queria.</span>
+            </p>
+        </div>
+        <!-- Seção de Imagem -->
+        <div class="image-section">
+            <img src="images/faq.png" alt="Imagem relacionada">
+        </div>
+    </div>
+
+    <!-- Perguntas e Respostas -->
+    <div class="faq-session">
+        <div class="container">
+            <div class="perguntas">
+                <div class="pergunta" data-target="resposta1">
+                    Qual é o nosso objetivo?
+                    <span class="seta">▼</span>
+                </div>
+                <div id="resposta1" class="resposta">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+
+                <div class="pergunta" data-target="resposta2">
+                    Como entrar em contato?
+                    <span class="seta">▼</span>
+                </div>
+                <div id="resposta2" class="resposta">
+                    Contate-nos através de nosso e-mail oficial ou telefone disponível no rodapé do site.
+                </div>
+
+                <div class="pergunta" data-target="resposta3">
+                    Quais são nossos valores?
+                    <span class="seta">▼</span>
+                </div>
+                <div id="resposta3" class="resposta">
+                    Nosso foco é transparência, inovação e suporte ao cliente.
+                </div>
+
+                <div class="pergunta" data-target="resposta4">
+                    Quais serviços oferecemos?
+                    <span class="seta">▼</span>
+                </div>
+                <div id="resposta4" class="resposta">
+                    Oferecemos consultoria, suporte técnico e desenvolvimento personalizado.
+                </div>
+
+                <div class="pergunta" data-target="resposta5">
+                    Como funciona nosso suporte?
+                    <span class="seta">▼</span>
+                </div>
+                <div id="resposta5" class="resposta">
+                    Nosso suporte é 24/7, disponível para resolver quaisquer problemas rapidamente.
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Seção de Formulário (aparece após a última pergunta) -->
+<div id="form-section" class="form-section">
+    <h2>Entre em contato</h2>
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+        </div>
+        <div class="form-group">
+            <label for="pergunta">Sua Pergunta:</label>
+            <textarea id="pergunta" name="pergunta" required placeholder="Digite aqui a sua pergunta para atendimento individual"></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+    <footer style="background-color: #10364D; padding: 20px 0; color: white;">
+        <div class="container">
+            <!-- Seção Siga-nos -->
+            <div class="siga-nos">
+                <h3>Siga-nos</h3>
+                <ul>
+                    <li><a href="#">Insta <img src="images/instagram.png" alt="Instagram" class="social-logo"></a></li>
+                    <li><a href="#">Twitter <img src="images/twitter.png" alt="Twitter" class="social-logo"></a></li>
+                    <li><a href="#">Facebook <img src="images/facebook.png" alt="Facebook" class="social-logo"></a></li>
+                </ul>
+            </div>
+    
+            <!-- Seção Suporte -->
+            <div class="suporte">
+                <h3>Suporte</h3>
+                <ul>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Ipsum</a></li>
+                </ul>
+            </div>
+    
+            <!-- Seção Sobre Nós -->
+            <div class="sobre-nos">
+                <h3>Sobre Nós</h3>
+                <ul>
+                    <li><a href="#">Dolor</a></li>
+                    <li><a href="#">Seila</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Linha de Divisão -->
+        <hr style="border: 1px solid white; margin: 20px 0;">
+    
+        <!-- Direitos Autorais -->
+        <div class="copyright">
+            <p>@2024, All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="scriptfaq.js" defer></script>
+</body>
+</html>
