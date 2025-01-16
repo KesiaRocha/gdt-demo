@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Rosario:ital,wght@0,300..700;1,300..700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* --Imagem Fundo */
+
+#parte1 {
+  position: relative; 
+  background-image: url('assets/images/fundo-preto.png');
+  background-size: cover;
+  top:0;
+  background-position: top left; /* Fundo inicia no topo à esquerda */
+  height: 800px;
+  padding-bottom: 40px;
+  z-index:2;
+}
+
+#manifestacao {
+  position: absolute; 
+  top: 475px; 
+  left: 0;  
+  z-index: 1; /* Coloca "manifestação" atrás do fundo */
+}
+
+/* --Estilo Menu */
+
+header{
+    font-family: Montserrat;
+    font-weight: 600;
+    padding: 40px 4%;
+    color: #fcfcfc;
+    font-size: 20px;
+    margin-right: 40px;
+    
+
+    
+}
+
+#logo{
+  margin-left:200px;
+}
+
+.container{
+ 
+    max-width: 1280px;
+    margin: 0 auto;
+   
+
+}
+
+header > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li{
+    display: inline-block;
+    margin: 20px;
+}
+
+ul li a {
+    color: #fefcfc;
+    text-decoration-line: none;
+    cursor: pointer; 
+}
+
+a{
+    color: #fefcfc;
+    text-decoration-line: none ;
+}
+
+a:hover{
+    color: #B92020;
+    transition: 0.3s all;
+}
+
+#elipse {
+  position: absolute;
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  margin: 0; /* Remove qualquer espaçamento extra */
+  z-index: 1; /* Garante que a elipse fique visível sobre o fundo */
+}
+
+#text-timeline{
+  font-family: Outfit;
+  font-size:50px;
+  font-weight: 450;
+  margin-top:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#FFFFFF
+  
+}
+
+/* Timeline*/
+.hero {
+  font-family: Outfit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-bottom:350px;
+}
+
+.timeline {
+  position: relative;
+  width: 90%;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+.period {
+  position: relative;
+  text-align: center;
+}
+
+.date {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  transition: color 0.2s ease-in-out;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  position: relative;
+  z-index: 2; /* Garante que o círculo ficará acima da linha */
+  overflow: hidden; /* Oculta a linha que sairia do topo do círculo */
+}
+
+.circle:hover {
+  transform: scale(1.2);
+  background-color: #F84949;
+}
+
+.period .date {
+  color: #FFFFFF;
+  font-size: 20px;
+}
+.period:hover .date {
+  color: #F84949;
+}
+
+.tooltip {
+  position: absolute;
+  top: 120%; /* Linha e caixa posicionadas abaixo do círculo */
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  align-items: center;
+}
+
+.tooltip .line {
+  width: 2px;
+  height: 50px;
+  background: #fff;
+  position: absolute;
+  top: 0; /* A linha começa diretamente abaixo do círculo */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip .box {
+  width: 250px;
+  padding: 10px;
+  background: #333;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tooltip .box img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.period:hover .tooltip {
+  display: flex;
+}
+
+
+/* Fim da Timeline*/
+
+#destaques{
+  background-color: #FFFFFF;
+  height:1000px;
+}
+
+#destaque{
+  text-align:center;
+  font-family: Outfit;
+  font-weight: 600;
+  font-size: 60px;
+  margin-top:425px;
+}
+
+#elipse2 {
+  position: absolute; 
+  right: 0; 
+  top: 600px; /* Altere este valor para posicionar mais para cima */
+  margin: 0; 
+}
+
+#sobrenos{
+  height:100vh;
+  background-color: #B92020;
+  font-family: Outfit;
+
+}
+
+#elipse3{
+  position: absolute; 
+  right: 0; 
+}
+
+#texto-sobrenos{
+  text-align:center;
+  font-weight: 400;
+  color: #FFF2F2;
+  position:relative;
+  top:50px;
+  font-size:64px;
+}
+
+.infos{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; 
+}
+
+
+.logo {
+  position: relative; 
+  width: 200px; 
+  height: 200px; 
+  margin-left:200px;
+  margin-top:140px;
+}
+
+#elipse-branca {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  z-index: 1;  
+  width: 100%; 
+  height: auto;
+  
+}
+
+#logo-gdt {
+  position: absolute; 
+  top:60px;
+  right: 40px; 
+  z-index: 2; 
+  width: 100%; 
+  height: auto;
+}
+
+
+.texto{
+  font-size:45px;
+  margin-left:550px;
+  margin-top:30px;
+}
+
+footer{
+  height:524px;
+  background-color: #000000;
+  font-family: "Outfit", sans-serif;
+}
+
+.informacoes{
+display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  padding: 0 100px;
+}
+
+.informacao{
+  display: flex;
+  flex-direction: column;
+  color:white; 
+  margin-top: 60px; 
+  margin-left: 60px;    
+}
+
+#if-1 {
+  margin-left: 0; 
+
+}
+
+
+#if-3{
+  margin-right: 10px;
+}
+
+h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.informacao p{
+  padding: 20px;
+  font-weight: normal;
+  margin-left: 0;
+font-size:23px;
+}
+
+footer a:hover {
+  color: white;  /* Cor quando o mouse está sobre o link */
+}
+
+.linha-fina{
+  border-top: 1px solid white;
+  margin-top: 35px; 
+  margin-left:40px; 
+  margin-right:40px; 
+}
+
+.rights{
+  color:white; 
+  margin-top:40px;
+  margin-left:60px;   
+}
+ 
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.timeline {
+  position: relative;
+  width: 80%; /* Mantém a largura da timeline */
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 2%;  /* A linha começa um pouco mais à esquerda */
+  right: 2%; /* A linha termina um pouco antes da extremidade direita */
+  height: 2px;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+.period {
+  position: relative;
+  text-align: center;
+}
+
+.date {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.circle:hover {
+  transform: scale(1.2);
+  background-color: red;
+}
+
+.tooltip {
+  position: absolute;
+  top: 100%; /* Posiciona o tooltip abaixo do círculo */
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  align-items: center;
+}
+
+.tooltip .line {
+  width: 2px;
+  height: 50px;
+  background: #fff;
+  position: absolute;
+  top: 0; /* Linha começa no início do tooltip */
+}
+
+.tooltip .box {
+  width: 250px;
+  padding: 10px;
+  background: #333;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 50px; /* Move o retângulo para o final da linha */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tooltip .box img {
+  width: 100px; /* Tamanho da imagem */
+  height: auto; /* Mantém a proporção */
+  margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+  border-radius: 5px; /* Opcional: arredonda os cantos */
+}
+
+.period:hover .tooltip {
+  display: flex;
+  flex-direction: column; /* Garante que a linha e o retângulo fiquem empilhados */
+}
